@@ -1,0 +1,65 @@
+:root {
+	--mainColor: #d30a0a;
+	--mainColorLight: grey;
+	--secondaryColor: #56040a;
+}
+
+section{
+    padding: 2rem 9%;
+    background-color: white;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.contain{
+    text-align: center;
+    text-transform: none; 
+    margin-bottom: -100px;
+    padding-top: 10rem;
+
+}
+
+.contain h3{
+    font-size: 5rem;
+    line-height: 1.8;
+    color:var(--mainColorLight);
+    text-transform: none;
+    padding-bottom:  40px;
+}
+
+.connexion{
+    text-align: center;
+}
+
+input{
+    height:40px;
+    width: 200px;
+    border-radius: 50px;
+    text-indent: 10px;
+}
+
+input #remembercheckbox{
+    height:17px;
+    width: 60px;
+    margin : 0px;
+    padding: 0px;
+
+}
+
+.label{
+    color: var(--mainColorLight);
+    font-size : 1.3rem;
+}
+
+
+.connexion p{
+    margin-top: 10px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px ){
+
+    html section{
+        font-size: 20%;
+    }
+}
