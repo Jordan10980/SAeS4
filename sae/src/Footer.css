@@ -1,0 +1,70 @@
+
+:root {
+	--mainColor: #d30a0a;
+	--mainColorLight: grey;
+	--secondaryColor: #56040a;
+	--textColor: #eee;
+}
+
+.footer{
+    
+    margin-top: 0.1rem;
+    padding-top: 5rem;
+    background: var(--mainColor);
+    text-align: center;
+
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding-bottom: 3rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color: var(--textColor);
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box p{
+    display: block;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    color: white;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    color: white;
+    text-decoration: none;
+}
+
+
+.footer .box-container .box a:hover {
+    color: var(--secondaryColor);
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15%;
+    
+    
+}
+
+.footer .credit{
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    padding-top: 5rem;
+    font-size: 1.5rem;
+    text-transform: none;
+}
