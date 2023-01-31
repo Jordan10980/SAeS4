@@ -1,0 +1,89 @@
+:root {
+	--mainColor: #d30a0a;
+	--mainColorLight: grey;
+	--secondaryColor: #56040a;
+    --bgColor: white;
+}
+
+
+.container{
+    text-transform: none; 
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background-color: var(--bgColor);
+}
+.container h3{
+    font-size: 5rem;
+    line-height: 1.8;
+    color:var(--mainColorLight);
+    text-transform: none;
+    text-align: center;
+}
+
+.contenu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+}
+
+.carte{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.info{
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+.contact_form input{
+    height:40px;
+    width: 500px;
+    border-radius: 50px;
+    text-indent: 10px;
+}
+
+.contact_form input .envoyer{
+    margin-bottom: 10rem;
+}
+
+textarea{
+    height:40px;
+    width: 500px;
+    border-radius: 20px;
+    text-indent:15px;
+    height: 150px;
+}
+
+.contact_form label{
+    color: var(--mainColorLight);
+    font-size : 1.5rem;
+}
+
+.contact_form{
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+
+.contact_form p{
+    margin-top: 10px;
+    color: green;
+    font-size: 1.2rem;
+}
+
+
+@media only screen and (max-width: 1170px ){
+
+  
+
+    .contenu{
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
+
+
