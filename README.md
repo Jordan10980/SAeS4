@@ -14,7 +14,7 @@ Pourquoi nous avons choisis le site de beauvais :
     - Donner une meilleure UX
     - Plus de liberté sur les nouveautés à apporter
 
-PARTIE 1 : Application WEB du sondage
+**PARTIE 1 : Application WEB du sondage**
 
   - Le Front End
         L'objectif était de réalisé un site web qui nous plaît, plus intuitif et ergonomique pour l'utilisateur.
@@ -23,10 +23,9 @@ PARTIE 1 : Application WEB du sondage
 
 
 
-Sondage et sécurisation d'une application WEB
+**PARTIE2 : Sécurité de l’application WEB du sondage**
 
-
-
+Ici ce qui suit [Lien](https://example.com/ "titre de lien optionnel").
 
 
 
