@@ -25,18 +25,12 @@ Pourquoi nous avons choisis le site de beauvais :
 
 **PARTIE2 : Sécurité de l’application WEB du sondage**
 
-[Meriem NOUIRA](<meriem.nouira@etu.u-paris.fr>/ "Mail Meriem")
-[Sathusan KRISHNAPAKARAN](<sathusan.krishnapakaran@etu.u-paris.fr>/ "Mail Sathusan").
-[Mathis BAUMERT](<mathis.baumert@etu.u-paris.fr>/ "Mail Mathis").
-[Jordan DOHOU](<jordan.dohou@etu.u-paris.fr>/ "Mail Jordan").
-
-
 
 
 Technologies & Langages utilisés : React JS, PHP, CSS, GIT, MYSql, SQL et d'autres Librairies
 
 Pour plus d'informations merci de nous contacter aux adresses suivantes :
-  <meriem.nouira@etu.u-paris.fr>
-  <sathusan.krishnapakaran@etu.u-paris.fr>
-  <mathis.baumert@etu.u-paris.fr>
-  <jordan.dohou@etu.u-paris.fr>
+ - <meriem.nouira@etu.u-paris.fr>
+ - <sathusan.krishnapakaran@etu.u-paris.fr>
+ - <mathis.baumert@etu.u-paris.fr>
+ - <jordan.dohou@etu.u-paris.fr>
