@@ -36,8 +36,7 @@ Pourquoi nous avons choisis le site de beauvais :
 Technologies & Langages utilisés : React JS, PHP, CSS, GIT, MYSql, SQL et d'autres Librairies
 
 Pour plus d'informations merci de nous contacter aux adresses suivantes :
-  meriem.nouira@etu.u-paris.fr
-  sathusan.krishnapakaran@etu.u-paris.fr
-  mathis.baumert@etu.u-paris.fr
-  jordan.dohou@etu.u-paris.fr
-
+  <meriem.nouira@etu.u-paris.fr>
+  <sathusan.krishnapakaran@etu.u-paris.fr>
+  <mathis.baumert@etu.u-paris.fr>
+  <jordan.dohou@etu.u-paris.fr>
