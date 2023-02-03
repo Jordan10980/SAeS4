@@ -15,12 +15,12 @@ function Accueil() {
             </section>
 
             <section className='actu'>
-                <h3>Actualité</h3>
+                    <h3>Actualité</h3>
 
                 <div class='box-card'>
                     <div class="card" href='#'>
                     
-                        <div class="card-image"><img src="https://www.gekkode.com/wp-content/uploads/2021/08/orange.jpeg" alt="Orange" /></div>
+                        <div class="card-image"><img src="http://www.beauvais.fr/images/actus3/2301-permis-citoyen-intro.jpg" alt="imgR" /></div>
                             
                         <div class="card-body">
 
@@ -37,7 +37,7 @@ function Accueil() {
 
                     <div class="card" href='#'>
                     
-                        <div class="card-image"><img src="https://www.gekkode.com/wp-content/uploads/2021/08/orange.jpeg" alt="Orange" /></div>
+                        <div class="card-image"><img src="https://www.ventouxprovence.fr/fileadmin/_processed_/b/d/csm_recensement-web_e4457643e6.png" alt="Orange" /></div>
                             
                         <div class="card-body">
                             
@@ -54,7 +54,7 @@ function Accueil() {
 
                     <div class="card" href='#'>
                     
-                        <div class="card-image"><img src="https://www.gekkode.com/wp-content/uploads/2021/08/orange.jpeg" alt="Orange" /></div>
+                        <div class="card-image"><img src="http://www.beauvais.fr/images/actus3/2301-made-in-saint-jean-intro.jpg" alt="Orange" /></div>
                             
                         <div class="card-body">
                             
@@ -71,7 +71,7 @@ function Accueil() {
 
                     <div class="card" href='#'>
                     
-                        <div class="card-image"><img src="https://www.gekkode.com/wp-content/uploads/2021/08/orange.jpeg" alt="Orange" /></div>
+                        <div class="card-image"><img src="http://www.beauvais.fr/images/actus3/2301-portail-numerique-intro.jpg" alt="Orange" /></div>
                             
                         <div class="card-body">
                             
@@ -85,6 +85,41 @@ function Accueil() {
 
                         </div>
                     </div>
+
+                    <div class="card" href='#'>
+                    
+                        <div class="card-image"><img src="https://www.soubise.fr/wp-content/uploads/2022/06/sport.jpg" alt="Orange" /></div>
+                            
+                        <div class="card-body">
+                            
+                            <div class="card-date"><time>5 Janvier 2023</time></div>
+
+                            <div class="card-title"><h3>L'agenda sportif du mois de janvier 2023</h3></div>
+                    
+                            <div class="card-excerpt">
+                                <p>  Retrouvez toutes les manifestations sportives de la ville de Beauvais du mois de janvier 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card" href='#'>
+                    
+                    <div class="card-image"><img src="https://business.lesechos.fr/medias/2013/12/26/58690_1388051263_devise-emergente-inde-developpement.jpg" alt="Orange" /></div>
+                        
+                    <div class="card-body">
+                        
+                        <div class="card-date"><time>16 Novembre 2022</time></div>
+
+                        <div class="card-title"><h3>Fonds solidarité inflation : « Aider les Beauvaisiens qui en ont besoin ! »</h3></div>
+                
+                        <div class="card-excerpt">
+                            <p>  Début octobre, Franck Pia, maire de Beauvais, a annoncé la mise en place d’un Fonds solidarité inflation destiné à apporter une aide aux Beauvaisiennes et aux Beauvaisiens qui ne sont pas éligibles aux dispositifs d’aides mis en place par l’État.</p>
+                        </div>
+
+                    </div>
+                </div>
+
 
                 </div>    
                 </section>

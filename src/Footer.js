@@ -2,7 +2,7 @@
 import {FaBars , FaTimes} from "react-icons/fa"
 import logo from './image/logo.gif'
 import "./Footer.css";
-
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function Footer() {
 	return (
 		<footer className="footer">
@@ -10,11 +10,11 @@ function Footer() {
 
             <div className="box">
                 <h3>Navigation</h3>
-                <a href="/#">Accueil</a>
-				<a href="/#">Actualité</a>
-				<a href="/#">Contact</a>
-                <a href="/#">Sondage</a>
-				<a href="/#">Connexion</a>
+                <Link to="/accueil" className="nav-link">Accueil</Link>
+            	<Link to="/transport" className="nav-link">Transport</Link>
+				<Link to="/nousretrouver" class="nav-link">Nous Retrouver</Link>
+				<Link to="/sondage" className="nav-link">Sondage</Link>
+				<Link to="/connexion" className="nav-link">Connexion</Link>
             </div>
 
             <div className="box">

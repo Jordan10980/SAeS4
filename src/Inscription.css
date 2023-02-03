@@ -4,25 +4,24 @@
 	--secondaryColor: #56040a;
 }
 
-section{
+
+
+.inscription_form h3{
+    font-size: 5rem;
+    line-height: 1.8;
+    color:var(--mainColorLight);
+    text-transform: none;
+    padding-bottom:  50px;
+    margin-top: 70px;
+}
+
+.inscription_form{
+    text-align: center;
     padding: 2rem 9%;
     background-color: white;
     text-align: center;
     text-transform: none; 
     margin-bottom: 150px;
-}
-
-
-section h3{
-    font-size: 5rem;
-    line-height: 1.8;
-    color:var(--mainColorLight);
-    text-transform: none;
-    padding-bottom:  20px;
-}
-
-.inscription_form{
-    text-align: center;
 }
 .inscription_form p{
     margin-top: 10px;
@@ -70,9 +69,3 @@ p .valid2{
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 1024px ){
-
-    html section{
-        font-size: 20%;
-    }
-}

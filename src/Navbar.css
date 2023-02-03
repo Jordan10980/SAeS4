@@ -36,14 +36,14 @@ header {
     
 }
 
-nav a {
+nav .nav-link {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
     font-size: 1.2rem;
 }
 
-nav a:hover {
+nav .nav-link:hover {
 	color: var(--secondaryColor);
 }
 
@@ -63,11 +63,28 @@ header .nav-btn:hover{
     color: var(--secondaryColor);
 }
 
+.search-btn {
+	background: transparent;
+	border: none ;
+	cursor: pointer;
+	margin-left: 5px;
+	color: white;
+  }
+
+  .search{
+	border: var(--secondaryColor);
+ } 
+  
+
 header div,
 nav {
 	display: flex;
 	align-items: center;
 }
+
+
+
+  
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
@@ -94,6 +111,7 @@ nav {
 	header .responsive_nav {
 		transform: none;
 	}
+
 
 	nav .nav-close-btn {
 		position: absolute;

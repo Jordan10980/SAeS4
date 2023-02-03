@@ -2,11 +2,12 @@
 	--mainColor: #d30a0a;
 	--mainColorLight: grey;
 	--secondaryColor: #56040a;
+    --bgColor: white;
 }
 
 section{
     padding: 2rem 9%;
-    background-color: white;
+    background-color: var(--bgColor);
     font-family: "Titillium Web", sans-serif;
 }
 
@@ -14,8 +15,6 @@ section{
     text-align: center;
     text-transform: none; 
     margin-bottom: -100px;
-    padding-top: 10rem;
-
 }
 
 .contain h3{
@@ -59,7 +58,7 @@ input #remembercheckbox{
 
 @media only screen and (max-width: 1024px ){
 
-    html section{
+    html .contain{
         font-size: 20%;
     }
 }

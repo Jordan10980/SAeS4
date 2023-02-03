@@ -1,0 +1,31 @@
+:root {
+	--mainColor: #d30a0a;
+	--mainColorLight: grey;
+	--secondaryColor: #56040a;
+    --bgColor: white;
+}
+
+body .body {
+    padding-top: 10rem;
+    text-align: center;
+}
+
+body h3, .text p{
+    color: var(--mainColorLight);
+}
+
+body h3{
+    font-size: 3rem;
+    line-height: 1.8;
+    color:var(--mainColorLight);
+    text-transform: none;
+    padding-bottom:  40px;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+

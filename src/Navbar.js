@@ -1,7 +1,8 @@
-import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useRef } from "react";
+import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import "./Navbar.css";
-import logo from './image/logo.gif'
+import logo from './image/logo.gif';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 	const navRef = useRef();
@@ -11,17 +12,18 @@ function Navbar() {
 	};
 
 	return (
+		<>
 		<header>
-			<a href="" className="logo"><img src={logo} alt=""/></a>
+			<Link to="/" className="logo"><img src={logo} alt=""/></Link>
 			<nav ref={navRef}>
-				<a href="./Accueil">Accueil</a>
-				<a href="">Actualité</a>
-				<a href="#">Contact</a>
-        <a href="/#">Sondage</a>
-				<a href="./Connexion.js">Connexion</a>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
+				<Link to="/" className="nav-link">Accueil</Link>
+				<Link to="/transport" className="nav-link">Transport</Link>
+				<Link to="/nousretrouver" className="nav-link">Nous Retrouver</Link>
+				<Link to="/sondage" className="nav-link">Sondage</Link>
+				<Link to="/connexion" className="nav-link">Connexion</Link>
+				<input type='search' placeholder="Rechercher..." className="search"/>
+				<button className="search-btn"> <FaSearch /> </button>
+				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 					<FaTimes />
 				</button>
 			</nav>
@@ -29,6 +31,7 @@ function Navbar() {
 				<FaBars />
 			</button>
 		</header>
+		</>
 	);
 }
 

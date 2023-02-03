@@ -2,25 +2,39 @@
 	--mainColor: #d30a0a;
 	--mainColorLight: grey;
 	--secondaryColor: #56040a;
+    --bgColor: white;
 }
 
-section{
-    padding: 2rem 9%;
-    background-color: white;
-    margin-bottom: 10rem;
-}
 
 .container{
-    text-align: center;
-    color: white;
     text-transform: none; 
-    padding-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background-color: var(--bgColor);
 }
 .container h3{
     font-size: 5rem;
     line-height: 1.8;
     color:var(--mainColorLight);
     text-transform: none;
+    text-align: center;
+}
+
+.contenu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+}
+
+.carte{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.info{
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
 }
 
 .contact_form input{
@@ -42,14 +56,15 @@ textarea{
     height: 150px;
 }
 
-label{
-    color: white;
+.contact_form label{
+    color: var(--mainColorLight);
     font-size : 1.5rem;
 }
 
-
 .contact_form{
     text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
 }
 
@@ -58,3 +73,17 @@ label{
     color: green;
     font-size: 1.2rem;
 }
+
+
+@media only screen and (max-width: 1170px ){
+
+  
+
+    .contenu{
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
+
+
