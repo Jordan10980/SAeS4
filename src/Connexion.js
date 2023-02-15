@@ -9,23 +9,31 @@ const Connexion=()=>{
     return( 
         <>
 
-<section className="contain">
-    <h3>Connexion</h3>
-    </section>
-
     <section className="connexion">
-        <form>
 
-            <input type="email" name="mailconnect" placeholder="Mail"/>
-            <br /><br />
-            <input type="password" name="mdpconnect" placeholder="Mot de passe" />
-            <br /><br /> <br /><br />
-            <input type="checkbox" name="rememberme" id="remembercheckbox" /><label class="label" for="remembercheckbox">Se souvenir de moi </label>
-            <br /><br /> <br />
-            <input type="submit" name="formconnexion" id='btn' value="Se connecter !"/>
-        </form>
+        <div className='boite'>
 
-        
+            <h2>Connectez-vous</h2>
+
+            <form>
+                <br/> <br/>
+                <input type="email"  className='champs' name="mailconnect" placeholder="Nom d'utilisateur ou e-mail"/>
+                <br /><br />
+                <input type="password" className='champs'name="mdpconnect" placeholder="Mot de passe" />
+                <br /><br />
+                <input type="checkbox" name="rememberme" id="remembercheckbox" /><label class="label" for="remembercheckbox">Se souvenir de moi </label>
+                <br /><br /> 
+                <input type="submit" name="formconnexion" id='btn' value="Se connecter"/>
+                <br /><br /> <br />
+
+                <div className='btn-bas'>
+                <Link to ="#"><button className='btn-1'>Mot de passe oublié</button></Link>
+                <Link to ="/inscription"><button className='btn-2'>S'inscrire</button></Link>
+                </div>
+            </form>
+            
+
+        </div>
 
 
         <br /><br />    

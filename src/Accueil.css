@@ -1,12 +1,17 @@
 
 :root {
-	--mainColor: #d30a0a;
-	--mainColorLight: grey;
-	--secondaryColor: #56040a;
+	--mainColor: #bae1f5 ;
+	--secondaryColor: #4682B4;
+  --bgColor: #FBFCFC;
+  --text-Color: black;
+}
+
+.b-body{
+  background: var(--bgColor);
 }
 
 .premier{
-    background-image: url(./image/accueil.jpeg);
+    background-image: url(https://www.lemediaa.com/wp-content/uploads/2022/01/20-01-22-dpt60-oise-beauvais-2024-capitale-de-la-culture-arndale-gettyimages-1211562790-scaled.jpeg);
     height: 100vh;
     background-size: cover ;
     background-position: center;
@@ -43,63 +48,175 @@
 }
 
 
-.actu h3{
-  text-align: center;
-}
+
 
 /*carte actu*/
+
+.actu{
+  padding: 2rem;
+}
+
+.actu .titre{
+  text-align: center;
+  color: var(--text-Color);
+}
 
 .box-card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
-.card {
-    width: 400px; /*1*/
-    margin: 0px auto; /*2*/
-    background-color: white; /*3*/
-    box-shadow: 0px 5px 20px var(--mainColorLight); /*4*/
-    margin-bottom: 20px;
-  }
- 
-  .card:hover .card-image img { /*6*/
-    width: 100%;
-  }
 
-  .card-image {
-    height: 250px;/*1*/
-    position: relative;/*2*/
-    overflow: hidden;/*3*/
-  }
-  .card-image img {
-    width: 150%;/*4*/
-      /*5 - Méthode de centrage en fonction de la taille de l'image */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition-duration: .3s;
-    transition-timing-function: ease;
-  }
+/* new */
 
-.card-body {
-    text-align:center;  /*1*/
-    padding: 15px 20px; /*2*/
-    box-sizing: border-box; /*3*/
-}
-
-.card-title h3{
-    font-size: 2rem;
-    line-height: normal;
+::before, ::after{
+  box-sizing: border-box;
 }
   
-  .card-date, .card-title {
-    text-align:center;
-    text-transform:uppercase;
-    font-weight: bold;
+::selection{
+  background: #ff4656db;
+  color: #fff;
+}
+
+.cards{
+  max-width: 340px;
+  background: #1E2529;
+  border: 1px solid #343637;
+  position: relative;
+  cursor: pointer;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.cards h3{
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.cards a{
+  text-decoration: none;
+  color: #9FC5E8;
+}
+
+.cards .image-container{
+  width: 100%;
+  height: 170px;
+  position:relative; 
+  overflow:hidden ;
+}
+
+.cards img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards .image-container::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  width: 100%;
+  background: #9FC5E8;
+  mix-blend-mode: multiply;
+  transform: translateX(-120%) skewX(-10deg);
+  transition: transform 0.3S ease-out;
+}
+
+.card-footer{
+  padding: 1rem 1rem 2.5rem 1rem;
+  color: rgb(236, 232, 225);
+  transition: all 0.3s ease;
+  height: 68%;
+}
+
+.card-footer h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.card-footer:hover h3{
+  color:rgb(56, 62, 58);
+}
+
+.card-footer span{
+  font-weight: bold;
+  font-size: 1rem;
+  color: #5a6469;
+}
+
+.card-footer p{
+  font-size:1rem;
+  line-height: 25px;
+}
+
+.read-more{
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.read-more span{
+  display: block;
+  margin-left: 0.4rem;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.cards:hover .read-more{
+  color:rgb(56, 62, 58);
+}
+
+
+.cards:hover .read-more span{
+  transform: translateX(5px);
+}
+
+.cards:hover .image-container::before{
+  transform: translateX(0) skewX(-10deg) scaleX(1.3);
+}
+
+.cards:hover .card-footer{
+  background: #ffffff;
+  color: rgb(56, 62, 58);
+}
+
+.cards:hover .card-footer a{
+  color: var(--secondaryColor);
+}
+
+.card:hover span{
+  color: #9FC5E8;
+}
+
+.cards::before{
+  content:"";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #9FC5E8 50%, #383e3a 50%);
+  background-size: 200%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transition: all 0.5s;
+}
+
+.cards:hover::before{
+  background-position: 0%;
+}
+
+@media only screen and (max-width: 830px ){
+  .box-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .card-date, .card-excerpt {
-    color: var(--mainColorLight);
-  }
+}
+  

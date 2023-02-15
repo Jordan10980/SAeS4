@@ -47,26 +47,28 @@ function Inscription() {
 
         <section className="inscription_form">
 
-            <h3>Inscription</h3>
+          <div className='boite-2'>
+              <h2>Inscrivez-vous</h2>
 
-        <form onSubmit={handleSubmit}>
-            
-            <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" onChange={handleChange}/>
-        <br />
-            <input type="email" placeholder="Votre mail" id="mail" name="mail"  onChange={handleChange}/>
-        <br />
-            <input type="email" placeholder="Confirmez votre email" id="mail2" name="mail2" onChange={handleChange}/>
-        <br />
-            <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp"  onChange={handleChange}/>
-        <br />
-            <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" onChange={handleChange}/>
-        <br />
+              <form onSubmit={handleSubmit}>
+                  <br/><br/>
+                  <input type="text" placeholder="Nom" id="pseudo" name="pseudo" onChange={handleChange}/>
+                  <br/><br/>
+                  <input type="email" placeholder="E-mail" id="mail" name="mail"  onChange={handleChange}/>
+                  <br/><br/>
+                  <input type="password" placeholder="Mot de passe" id="mdp" name="mdp"  onChange={handleChange}/>
+                  <br/><br/>
+                  <input type="password" placeholder="Confirmez le mot de passe" id="mdp2" name="mdp2" onChange={handleChange}/>
+                  <br/><br/><br/>
+                 <input type="submit" name="forminscription" id="btn-i" value="S'inscrire"/>
+                 <br/><br/>
 
-        <input type="submit" name="forminscription" id="btn" value="Je m'inscris"/>
+              </form>
+              <Link to ="/connexion"><button className='btn-3'>Se connecter</button></Link>
 
-        </form>
+              {response ? <p>{response}</p> : null}
 
-        {response ? <p>{response}</p> : null}
+          </div>
 
         </section>
 

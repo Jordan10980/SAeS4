@@ -1,49 +1,44 @@
-
 :root {
-	--mainColor: #d30a0a;
-	--mainColorLight: grey;
-	--secondaryColor: #56040a;
-	--textColor: #eee;
+	--mainColor: #87CEFA ;
+	--ColorLight: grey;
+	--secondaryColor: #4682B4;
+	--textColor: black;
 }
 
 .footer{
-    
-    margin-top: 0.1rem;
-    padding-top: 5rem;
     background: var(--mainColor);
     text-align: center;
 
 }
 
+.footer .box-container .box{
+    padding-bottom: 1rem;
+}
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1.5rem;
 }
 
-.footer .box-container .box{
-    padding-bottom: 3rem;
-}
 
 .footer .box-container .box h3{
-    font-size: 2.5rem;
-    padding:1rem 0;
+    font-size: 1.5rem;
     color: var(--textColor);
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
 }
 
 .footer .box-container .box p{
     display: block;
-    font-size: 1.5rem;
-    padding:1rem 0;
-    color: white;
+    font-size: 1rem;
+    padding:0.2rem 0;
+    color: var(--textColor);
 }
 
 .footer .box-container .box a{
     display: block;
-    font-size: 1.5rem;
-    padding:1rem 0;
-    color: white;
+    font-size: 1rem;
+    padding:0.2rem 0;
+    color: var(--textColor);
     text-decoration: none;
 }
 
@@ -53,18 +48,14 @@
 }
 
 .logo img {
-    width: 70px;
+    width: auto;
     height: 70px;
-    border-radius: 15%;
-    
-    
 }
 
 .footer .credit{
-    color: white;
+    color: var(--textColor);
     padding: 1rem;
-    margin-top: 2rem;
-    padding-top: 5rem;
-    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-size: 1rem;
     text-transform: none;
 }
