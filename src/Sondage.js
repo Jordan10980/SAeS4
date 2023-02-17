@@ -104,6 +104,8 @@ function Sondage() {
                             //Creer un json au fur et a mesure qu'il choisit des aliments et si les aliments arrivent à 10 alors on désactive le bouton
                             //isOptionDisabled={() => aliments.length >= maxLimit}
                         />
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <button className='b-valider'>valider</button>
                     </div>
                     <br/><br/><br/><br/><br/><br/>
                     </body>
