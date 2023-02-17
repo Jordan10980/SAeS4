@@ -1,0 +1,127 @@
+:root {
+	--mainColor: #bae1f5 ;
+	--ColorLight: grey;
+	--secondaryColor: #4682B4;
+}
+
+
+.mainContainer .poll{
+    padding-top: 10rem;
+    background-image: url(https://www.visitbeauvais.fr/content/uploads/2022/08/092_Jardin_du_Brule_Oise_Tourisme2019_SMELLINCKX.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.mainContainer .stitle{
+    text-align: center;
+}
+
+.mainContainer .page1{
+    display: inline-block;
+    background:linear-gradient(to bottom,
+    aliceblue 2%,
+    aliceblue 17%,
+    var(--secondaryColor) 17%,
+    var(--secondaryColor) 100%);
+    opacity: 85%;
+    height: 600px ;
+    width: 500px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    padding-bottom: 2rem;
+    box-shadow: 0px 5px 20px var(--ColorLight);
+}
+
+.mainContainer input{
+    background-color: aliceblue;
+}
+
+
+
+.mainContainer .ant-picker{
+    background-color: aliceblue;
+    width: 270px;
+}
+
+.mainContainer label text{
+    opacity: 100%;
+}
+
+.mainContainer .page2{
+    display: inline-block;
+    background:linear-gradient(to bottom,
+    aliceblue 2%,
+    aliceblue 17%,
+    var(--secondaryColor) 17%,
+    var(--secondaryColor) 100%);
+    opacity: 85%;
+    height: 500px ;
+    width: 500px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    padding-bottom: 2rem;
+    box-shadow: 0px 5px 20px var(--ColorLight);
+}
+
+.mainContainer p{
+    padding-top: 1rem;
+}
+
+.mainContainer .ant-btn{
+    background-color: aliceblue;
+}
+
+@media only screen and (max-width: 580px ){
+
+     .mainContainer .page1, .mainContainer .page2{
+        width:300px;
+    }
+
+    .mainContainer .page1{
+        height: 900px;
+
+        background:linear-gradient(to bottom,
+        aliceblue 2%,
+        aliceblue 12%,
+        var(--secondaryColor) 12%,
+        var(--secondaryColor) 100%);
+    }
+
+    .mainContainer .page2{
+
+        background:linear-gradient(to bottom,
+        aliceblue 2%,
+        aliceblue 20%,
+        var(--secondaryColor) 20%,
+        var(--secondaryColor) 100%);
+    }
+
+
+}
+
+ /*animation*/
+
+.jump {
+    animation-name: jump;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
