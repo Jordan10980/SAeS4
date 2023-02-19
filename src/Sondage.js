@@ -40,12 +40,45 @@ function Sondage() {
         setSelectedOption(selectedOption);
     };
 
+    const page1Ref = useRef(null);
+    const page2Ref = useRef(null);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        const page1Rect = page1Ref.current.getBoundingClientRect();
+        const page2Rect = page2Ref.current.getBoundingClientRect();
+        const screenHeight = window.innerHeight;
+        const page1IsVisible = (page1Rect.top >= 0 && page1Rect.bottom <= screenHeight);
+        const page2IsVisible = (page2Rect.top >= 0 && page2Rect.bottom <= screenHeight);
+        if (page1IsVisible) {
+            page1Ref.current.classList.add('zoom');
+            page1Ref.current.classList.remove('dezoom');
+        } else {
+            page1Ref.current.classList.add('dezoom');
+            page1Ref.current.classList.remove('zoom');
+        }
+        if (page2IsVisible) {
+            page2Ref.current.classList.add('zoom');
+            page2Ref.current.classList.remove('dezoom');
+        } else {
+            page2Ref.current.classList.add('dezoom');
+            page2Ref.current.classList.remove('zoom');
+        }
+    };
+
+
 
     return (
         <>
         <div className='mainContainer'>
             <body className="poll">
-                <div className="page1">
+                <div className="page1" ref={page1Ref}>
                     <h3 className='stitle'>Sondage</h3>
                     <Form className="quiz"
                         labelCol={{
@@ -84,14 +117,14 @@ function Sondage() {
                         </Form.Item>
                         <br/>
                         <Form.Item>
-                            <Button onClick={() => document.querySelector('.page2').scrollIntoView({ behavior: 'smooth' })}>Passer à la sélection des aliments</Button>
+                            <Button onClick={() => document.querySelector('.page2').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })}>Passer à la sélection des aliments</Button>
                         </Form.Item>
                     </Form>
 
                     </div>
                     <br/><br/><br/>
 
-                    <div className='page2'>
+                    <div className='page2' ref={page2Ref}>
                         <p> Vous pouvez choisir les aliments en fonction de vos choix en les selectionnant ci-dessous.</p>
                         <br/><br/><br/>
                         <Select

@@ -121,22 +121,21 @@
 
  /*animation*/
 
-.jump {
-    animation-name: jump;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+ .mainContainer .page1 {
+    transition: transform 0.5s ease-in-out;
   }
   
-  @keyframes jump {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  .mainContainer .page2 {
+    transition: transform 0.5s ease-in-out;
   }
+  
+  .zoom {
+    transform: scale(1.1);
+  }
+  
+  .dezoom {
+    transform: scale(1);
+  }
+  
   
   
