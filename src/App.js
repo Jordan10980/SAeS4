@@ -9,8 +9,12 @@ import Accueil from"./Accueil";
 import Transport from './Transport';
 import Sondage from './Sondage';
 
+
 function App() {
+
 	return (
+
+
 		<Router>
 		<div>	
 		  <Navbar />
@@ -25,8 +29,12 @@ function App() {
 			<Footer />
 		</div>
 	  </Router>
-	  
+
+
+
 	);
 }
 
 export default App;
+
+

@@ -48,7 +48,7 @@
 }
 
 
-.contact_form input,button{
+.contact_form input, .envoyer{
     height:40px;
     width: 500px;
     border-radius: 5px;

@@ -1,6 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link, json,useNavigate } from 'react-router-dom';
-import "./Connexion.css"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import './Connexion.css';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode';
 
 const Connexion=()=>{
 
@@ -8,6 +11,7 @@ const Connexion=()=>{
     
     return( 
         <>
+
 
     <section className="connexion">
 
@@ -31,10 +35,28 @@ const Connexion=()=>{
                 <Link to ="/inscription"><button className='btn-2'>S'inscrire</button></Link>
                 </div>
             </form>
-            
+
+            <div align="center">
+            <br/>
+        
+
+        <GoogleOAuthProvider clientId="586836053659-g0oo0l4r39q6sf3m2l18ibies53hmec4.apps.googleusercontent.com">
+            <GoogleLogin
+                onSuccess={credentialResponse => {
+                    const details = jwt_decode(credentialResponse.credential); 
+                    console.log(details);
+                console.log(credentialResponse);
+            }}
+                onError={() => {
+                console.log('Login Failed');
+            }}
+        /></GoogleOAuthProvider>    
+            </div>
+                    
+   
+
 
         </div>
-
 
         <br /><br />    
 
