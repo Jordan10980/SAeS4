@@ -48,7 +48,7 @@
 }
 
 
-.contact_form input{
+.contact_form input,button{
     height:40px;
     width: 500px;
     border-radius: 5px;
@@ -119,6 +119,15 @@ textarea{
         font-size: 1.5rem;
     
     }
+}
+
+
+.envoie_contact{
+    padding-top: 7em;
+    padding-bottom: 7em;
+    text-align: center;
+    color: green;
+    font-size: 2em;
 }
 
 /* POur les petits écrans telephone*/

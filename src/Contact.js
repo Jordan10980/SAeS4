@@ -1,50 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {BrowserRouter as Router, Routes, Route, Link, json,useNavigate } from 'react-router-dom';
+import { useForm, ValidationError } from '@formspree/react';
 
 import "./Contact.css";
 
 function Contact() {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    to: '',
-    tel: '',
-    subject: '',
-    message: ''
-  });
-
-  const [response, setResponse] = useState(null);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((formData) => ({ ...formData, [name]: value }));
+  const [state, handleSubmit] = useForm("xlekbkdv");
+  if (state.succeeded) {
+    
+      // return <p><br/><br/><br/><br/><br/>Thanks for joining!</p>;
+      return <div className='envoie_contact'>
+        <br/><br/><br/><br/><br/>
+        <p>Votre message a bien été envoyé</p>
+        </div>
   };
-
-
-
-  const handleSubmit = event => {
-    event.preventDefault();
-
-    fetch("http://localhost/php_saes4/sendmail.php", {
-      method: 'POST',
-      body: JSON.stringify({
-        data: formData,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(response => response.text())
-      .then((data) => {
-        setResponse(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
-
-
 
     return (
       <>
@@ -75,34 +45,48 @@ function Contact() {
                   <br/>
                     <form onSubmit={handleSubmit}>
                         
-                        <input type="name" placeholder='Nom*' id='name' name="name" onChange={handleChange} required/>
+                        <input type="name" id='nom' name="nom" placeholder='Nom*' required/>
+                        <ValidationError prefix="Nom" field="Nom :"  errors={state.errors} />
                         <br/>
                        
-                        <input type="email" placeholder="E-mail*" id="to" name="to" onChange={handleChange} required/>
+                        <input type="email" id="email" name="email"  placeholder="E-mail*" required/>
+                        <ValidationError prefix="Email" field="email" errors={state.errors}/>
                         <br />
                         
-                        <input type="tel" placeholder="Téléphone" id="tel" name="tel" onChange={handleChange} required/>
+                        <input type="tel" id="tel" name="tel" placeholder="Téléphone"/>
+                        <ValidationError prefix="Tel" field="tel"  errors={state.errors} />
                         <br />    
                         
-                        <input type="text" placeholder="Objet du message*" id="subject" name="subject" onChange={handleChange} required/>
+                        <input type="text" id="objet" name="objet"placeholder="Objet du message*" required/>
+                        <ValidationError prefix="Objet" field="objet"  errors={state.errors} />
                         <br />    
-                        <textarea placeholder="Ecrivez un message ..." id="message" name="message"onChange={handleChange} required />
-                        <br /> 
-                        <input className="envoyer" type="submit" name="formcontact" id="btn" value="Soumettre" />
+
+                        <textarea id="message" name="message" placeholder="Ecrivez un message ..." required/>
+                        <ValidationError prefix="Message" field="message"  errors={state.errors} />
+                        <br />
+
+                        <button  className="envoyer" type="submit" name="formcontact" disabled={state.submitting}>Soumettre</button>
                           
                       </form>
 
-                      {response ? <p>{response}</p> : null}
                         
-              </div>
+          </div>
+
+
             </div>
           </div>
-        </>
+    </>
+    
     );
 
 }
 
-export default Contact;
+function ContactAffiche() {
+  return (
+    <Contact />
+  );
+}
+export default ContactAffiche;
 
 
 
