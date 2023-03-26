@@ -8,6 +8,8 @@ import Contact from "./Contact";
 import Accueil from"./Accueil";
 import Transport from './Transport';
 import Sondage from './Sondage';
+import Profil from './Profil';
+import Editionprofil from './Editionprofil';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
 			  <Route path="/inscription" element={<Inscription />} />
 			  <Route path="/transport" element={<Transport />} />
 			  <Route path="/sondage" element={<Sondage />} />
+			  <Route path="/profil" element={<Profil />} />
+			  <Route path='/editionprofil' element={<Editionprofil />} />
 			</Routes>
 			<Footer />
 		</div>

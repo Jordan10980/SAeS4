@@ -20,7 +20,7 @@
 
 
 .contenu{
-    display: grid;
+    /*display: grid;*/
     grid-template-rows: 50% 50%;
     justify-content: space-between;
 }
