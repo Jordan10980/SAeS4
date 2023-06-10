@@ -6,14 +6,6 @@ import './Editionprofil.css'
 
 const Editionprofil=()=>{
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    if (window.myGlobalLogin === true) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
   const [pseudo, setPseudo] = useState(window.myGlobalPseudo);
   const [mail, setMail] = useState(window.myGlobalMail);
 
@@ -42,7 +34,7 @@ const Editionprofil=()=>{
       const handleSubmit = (event) => {
            event.preventDefault();
 
-           fetch("http://localhost/php/editionprofil.php", {
+           fetch("http://localhost/php_saes4/editionprofil.php", {
             method: 'POST',
             body: JSON.stringify({
               data: formData,
@@ -105,7 +97,7 @@ const Editionprofil=()=>{
 
                 <div className='btn-bas-2'>
                     <input className='majbtn' type="submit" name="editprofil" id="btn1" value="Mettre à jour mon profil "/>
-                    <Link to={`/profil`} className='abtn'>Annuler</Link>
+                    <Link to={`/profil?id=${window.myGlobalLoginId}`} className='abtn'>Annuler</Link>
                 </div>
                 </form>
                 

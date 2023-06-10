@@ -6,7 +6,7 @@ import { DatePicker, Space } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { Pagination } from 'antd';
 import'./Sondage.css';
-import moment from 'moment';
+
 
 
 const layout = {
@@ -36,6 +36,8 @@ function Sondage() {
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [formData, setFormData] = React.useState({});
     const [dateNaissance, setDateNaissance] = useState(null);
+    const [isPage1Clicked, setIsPage1Clicked] = useState(false); // pour la condition sur bouton valider
+  
 
     const handleDateChange = (date, dateString) => {
         setDateNaissance(dateString);
@@ -55,6 +57,10 @@ function Sondage() {
   
     const page1Ref = useRef(null);
     const page2Ref = useRef(null);
+
+    const navigate = useNavigate();
+
+    const [response, setResponse] = useState(null); // Pour l'affichage des erreurs ou des success
   
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
@@ -93,7 +99,11 @@ function Sondage() {
         })
         .then(response => response.text())
         .then(result => {
-          console.log('Result:', result);
+          setResponse(result);
+          //console.log('Result:', result);
+          if(result.includes('Vos données ont bien été envoyé')){
+            navigate('/resultatsondage');
+          }
         })
         .catch(error => {
           console.error('Error:', error);
@@ -114,7 +124,7 @@ function Sondage() {
         };
         sendDataToPHP(data);
       };
-            
+
   
 
     return (
@@ -168,7 +178,7 @@ function Sondage() {
                         </Form.Item>
                         <br/>
                         <Form.Item>
-                            <Button htmlType="submit" onClick={() => document.querySelector('.page2').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })} >Passer à la sélection des aliments</Button>
+                            <Button htmlType="submit" onClick={() => {document.querySelector('.page2').scrollIntoView({behavior:'smooth',block:'end',inline:'nearest'});setIsPage1Clicked(true);}}>Passer à la sélection des aliments</Button>
                         </Form.Item>
                     </Form>
 
@@ -188,8 +198,10 @@ function Sondage() {
                             isOptionDisabled={() => selectedOptions.length >= 10}
                         />
                         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                        <button className='b-valider' onClick={() => handleSubmit(formData)}>valider</button>
+                        <button className='b-valider' onClick={() => handleSubmit(formData)} disabled={!isPage1Clicked || selectedOptions.length === 0}>Valider</button>
+                        {response ? <p className='response'>{response}</p> : null} 
                         </div>
+                        
                     <br/><br/><br/><br/><br/><br/>
                     </body>
         </div>

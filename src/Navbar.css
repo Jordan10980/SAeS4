@@ -65,7 +65,7 @@ header .nav-btn:hover{
 	justify-content: center;
 }
 
-.Connexion-btn, .Inscription-btn, .Connexion-btn-2, .Inscription-btn-2{
+.Connexion-btn, .Inscription-btn, .Connexion-btn-2, .Inscription-btn-2, .profile_navbar, .logout_navbar{
 	background-color: var(--mainColorLight);
 	border: none;
 	border-radius: 10%;
@@ -76,20 +76,13 @@ header .nav-btn:hover{
 	cursor: pointer;
 }
 
-.Connexion-btn:hover, .Inscription-btn:hover, .Connexion-btn-2:hover, .Inscription-btn-2:hover{
+.Connexion-btn:hover, .Inscription-btn:hover, .Connexion-btn-2:hover, .Inscription-btn-2:hover, .profile_navbar:hover, .logout_navbar:hover{
 	color: var(--secondaryColor);
 }
 
-.lang, .lang-2 {
-	width: 40px;
-	height: 30px;
-	margin: 10px;
-	border: none;
-	border-radius: 10%;
-	background-color: var(--mainColorLight);
-}
 
-.Connexion-btn-2, .Inscription-btn-2, .lang-2{
+
+.Connexion-btn-2, .Inscription-btn-2{
 	display: none;
 }
 
@@ -101,6 +94,13 @@ nav {
 	align-items: center;
 }
 
+.profile_navbar{
+	padding-right: 20px;
+}
+
+.logout_navbar{
+	padding-right: 20px;
+}
 
 
   
@@ -153,11 +153,11 @@ nav {
 
 @media only screen and (max-width: 580px) {
 
-	.Connexion-btn, .Inscription-btn, .lang{
+	.Connexion-btn, .Inscription-btn{
 		display: none;
 	}
 
-	.Connexion-btn-2, .Inscription-btn-2, .lang-2{
+	.Connexion-btn-2, .Inscription-btn-2, .profile_navbar, .logout_navbar{
 		display: unset;
 	}
 
@@ -166,4 +166,5 @@ nav {
 	}
 
 }
+
 

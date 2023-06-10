@@ -10,7 +10,10 @@ import Transport from './Transport';
 import Sondage from './Sondage';
 import Profil from './Profil';
 import Editionprofil from './Editionprofil';
-
+import Forgot from './Forgot';
+import ForgotCode from './ForgotCode';
+import Sedeconnecter from './Sedeconnecter';
+import ResultatSondage from './ResultatSondage';
 
 function App() {
 
@@ -23,12 +26,16 @@ function App() {
 			<Routes>
 			  <Route path="/" element={<Accueil />} />
 			  <Route path="/connexion" element={<Connexion />} />
+			  <Route path="/sedeconnecter" element={<Sedeconnecter/>}/>
 			  <Route path="/nousretrouver" element={<Contact />} />
 			  <Route path="/inscription" element={<Inscription />} />
 			  <Route path="/transport" element={<Transport />} />
 			  <Route path="/sondage" element={<Sondage />} />
 			  <Route path="/profil" element={<Profil />} />
 			  <Route path='/editionprofil' element={<Editionprofil />} />
+			  <Route path='/forgotCode' element={<ForgotCode />} />
+			  <Route path='/forgot' element={<Forgot />} />
+			  <Route path='/resultatsondage' element={<ResultatSondage />} />
 			</Routes>
 			<Footer />
 		</div>

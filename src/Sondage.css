@@ -27,7 +27,7 @@
     var(--secondaryColor) 17%,
     var(--secondaryColor) 100%);
     opacity: 85%;
-    height: 600px ;
+    height: 700px ;
     width: 500px;
     padding-top: 1rem;
     padding-left: 1rem;
@@ -87,8 +87,8 @@
 	cursor: pointer;
 }
 
-.mainContainer .b-valider:hover{
-    color: var(--secondaryColor);
+.mainContainer .b-valider:hover:not(:disabled) {
+    color: var(--secondaryColor); 
 }
 
 @media only screen and (max-width: 580px ){
@@ -98,7 +98,7 @@
     }
 
     .mainContainer .page1{
-        height: 900px;
+        height: 1000px;
 
         background:linear-gradient(to bottom,
         aliceblue 2%,
@@ -138,4 +138,32 @@
   }
   
   
-  
+  p.response{
+    color: white;
+    font-size: 22px;
+  }
+
+
+
+  /* Résultat sondage css */
+
+  .page1 h3{
+    color: black;
+  }
+
+  .page1 h2{
+    color: black;
+    text-align: center;
+  }
+
+.page1{color:white;}
+
+  p.prenom, p.nom, p.age, p.city, p.foods, p.autre{
+    text-align: center;
+
+  }
+
+
+
+
+

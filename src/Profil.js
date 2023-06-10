@@ -8,53 +8,44 @@ import imglogo from './avatars/default.jpeg'
 
 const Profil=()=>{
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
 
-    useEffect(() => {
-      if (window.myGlobalLogin === true) {
-        setIsLoggedIn(true);
-      }
-    }, []);
+  const params = new URLSearchParams(location.search);
 
+  const [pseudo, setPseudo] = useState(null);
+  const [avatar, setAvatar] = useState(null);
+  const [mail, setMail] = useState(null);
+  const [id, setId] = useState(null);
+  const [pathimg, setPathImg] = useState(null);
 
-    const location = useLocation();
+  useEffect(() => {
+      handleClick();
+    }, []); 
 
-    const params = new URLSearchParams(location.search);
+  const handleClick = () => {
 
-    const [pseudo, setPseudo] = useState(null);
-    const [avatar, setAvatar] = useState(null);
-    const [mail, setMail] = useState(null);
-    const [id, setId] = useState(null);
-    const [pathimg, setPathImg] = useState(null);
-
-    useEffect(() => {
-        handleClick();
-      }, []); 
-
-    const handleClick = () => {
-
-    fetch('http://localhost/php/profil.php', {
-        method: 'POST',
-        body: params
+  fetch('http://localhost/php_saes4/profil.php', {
+      method: 'POST',
+      body: params
+    })
+      .then(response => response.text())
+      .then(data => {
+          const lines = data.split('\n');
+          setPseudo(lines[0])
+          window.myGlobalPseudo = lines[0];
+          setAvatar(lines[1])
+          setMail(lines[2])
+          window.myGlobalMail = lines[2];
+          setId(lines[3])
+          window.myGlobalId = lines[3];
+          setPathImg(require("./avatars/"+String(lines[1])));
+          window.myGlobalPath = pathimg;
       })
-        .then(response => response.text())
-        .then(data => {
-            const lines = data.split('\n');
-            setPseudo(lines[0])
-            window.myGlobalPseudo = lines[0];
-            setAvatar(lines[1])
-            setMail(lines[2])
-            window.myGlobalMail = lines[2];
-            setId(lines[3])
-            window.myGlobalId = lines[3];
-            setPathImg(require("./avatars/"+String(lines[1])));
-            window.myGlobalPath = pathimg;
-        })
-        .catch(error => {
-        });
-    };
+      .catch(error => {
+      });
+  };
 
-    
+
 
     return( 
     <>
