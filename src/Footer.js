@@ -10,7 +10,7 @@ function Footer() {
 
             <div className="box">
                 <h3>Navigation</h3>
-                <Link to="/" className="nav-link">Accueil</Link>
+                <Link to="/SAeS4" className="nav-link">Accueil</Link>
             	<Link to="/transport" className="nav-link">Transport</Link>
 				<Link to="/nousretrouver" class="nav-link">Nous Retrouver</Link>
 				<Link to="/sondage" className="nav-link">Sondage</Link>
