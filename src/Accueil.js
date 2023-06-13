@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link, json,useNavigate } from 'react-router-dom';
+import React from 'react';
 import "./Accueil.css";
-import img1 from './image/accueil.jpeg';
 
 function Accueil() {
 

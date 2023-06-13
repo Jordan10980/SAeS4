@@ -1,12 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './Connexion.css';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { GoogleLogin } from '@react-oauth/google';
-import jwt_decode from 'jwt-decode';
-import FacebookAuth from 'react-facebook-auth';
-import { FacebookLoginButton } from "react-social-login-buttons";
-
 
 const Connexion=()=>{
 
@@ -20,28 +14,6 @@ const Connexion=()=>{
     
       const navRef =useRef();
     
-      const showNavbar =  ()=>{
-          navRef.current.classList.toggle("responsive_nav"); 
-      }
-    
-
-    const authHandler = (err, data) => {
-        console.log(err, data);
-    };
-
-    const MyFacebookButton = ({ onClick }) => (
-        <button onClick={onClick}>
-            <FacebookLoginButton>
-            Se connecter avec Facebook
-            </FacebookLoginButton>
-        </button>
-    );
-
-    const authenticate = (response) => {
-        console.log(response);
-        // Api call to server so we can validate the token
-    };
-
     const [formData, setFormData] = useState({
         mailconnect: '',
         mdpconnect: '',
@@ -110,42 +82,16 @@ const Connexion=()=>{
                         {response ? <p>{response}</p> : null}    
 
                         <div className='btn-bas'>
-                            <Link to ="#"><button className='btn-1'>Mot de passe oublié</button></Link>
                             <Link to ="/inscription"><button className='btn-2'>S'inscrire</button></Link>
                         </div>
                     </form>
-
-                    <div align="center">
-                        <br/><br/>
-                            <FacebookAuth
-                                appId="1258939371388102"
-                                callback={authenticate}
-                                component={MyFacebookButton}
-                            />
-
-
-                        <GoogleOAuthProvider clientId="586836053659-g0oo0l4r39q6sf3m2l18ibies53hmec4.apps.googleusercontent.com">
-                            <GoogleLogin
-                                onSuccess={credentialResponse => {
-                                    const details = jwt_decode(credentialResponse.credential);
-                                    console.log(details);
-                                    console.log(credentialResponse);
-                                }}
-                                onError={() => {
-                                    console.log('Login Failed');
-                                }}
-                            /></GoogleOAuthProvider>
-                    </div>
-
-
-
 
                 </div>
 
                 <br /><br />
 
 
-                <br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
 
             </section>
 

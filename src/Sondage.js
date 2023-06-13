@@ -147,7 +147,7 @@ function Sondage() {
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
             >
-                        
+                        <br/><br/><br/>
                         <Form.Item label="Nom" name="nom"
                             rules={[{ required: true, message: 'Veuillez mettre votre nom!' }]}>
                             <Input />
