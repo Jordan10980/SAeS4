@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.e68be34f.css",
-    "main.js": "/build/static/js/main.e2c317f8.js",
+    "main.css": "/build/static/css/main.eb818ed4.css",
+    "main.js": "/build/static/js/main.b216aaf7.js",
     "static/js/787.9cc6dcf0.chunk.js": "/build/static/js/787.9cc6dcf0.chunk.js",
-    "static/media/accueil.jpeg": "/build/static/media/accueil.cb0a78de748a5673f168.jpeg",
     "static/media/logo agglo.png": "/build/static/media/logo agglo.6fab38237882d86dfd85.png",
     "static/media/default.jpeg": "/build/static/media/default.73db1592403661a47d9e.jpeg",
     "static/media/transport2.jpeg": "/build/static/media/transport2.981243ef34f479c5c18e.jpeg",
     "static/media/transport.jpeg": "/build/static/media/transport.61dcc963c5eae05481b9.jpeg",
     "index.html": "/build/index.html",
-    "main.e68be34f.css.map": "/build/static/css/main.e68be34f.css.map",
-    "main.e2c317f8.js.map": "/build/static/js/main.e2c317f8.js.map",
+    "main.eb818ed4.css.map": "/build/static/css/main.eb818ed4.css.map",
+    "main.b216aaf7.js.map": "/build/static/js/main.b216aaf7.js.map",
     "787.9cc6dcf0.chunk.js.map": "/build/static/js/787.9cc6dcf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e68be34f.css",
-    "static/js/main.e2c317f8.js"
+    "static/css/main.eb818ed4.css",
+    "static/js/main.b216aaf7.js"
   ]
 }
