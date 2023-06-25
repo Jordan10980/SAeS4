@@ -2,7 +2,7 @@
   "name": "sae",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jordan10980.github.io/SAeS4/build",
+  "homepage": "https://jordan10980.github.io/SAeS4/",
   "dependencies": {
     "@chakra-ui/react": "^2.6.0",
     "@formspree/react": "^2.4.1",

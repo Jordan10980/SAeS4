@@ -10,7 +10,7 @@ function Footer() {
 
             <div className="box">
                 <h3>Navigation</h3>
-                <Link to="/build" className="nav-link">Accueil</Link>
+                <Link to="/" className="nav-link">Accueil</Link>
             	<Link to="/transport" className="nav-link">Transport</Link>
 				<Link to="/nousretrouver" class="nav-link">Nous Retrouver</Link>
 				<Link to="/sondage" className="nav-link">Sondage</Link>
@@ -33,7 +33,7 @@ function Footer() {
 
         
         </div>
-        <div className="log"><Link to="/build" className="logo"><img src={logo} alt=""/></Link></div>
+        <div className="log"><Link to="/" className="logo"><img src={logo} alt=""/></Link></div>
         <div className="credit"><span> © 2019 | Mairie de Beauvais - BP 60330 - 1, rue Desgroux - 60021 Beauvais Cedex | Tél : 03 44 79 40 00 | Mentions légales</span></div>
 
     </footer>
