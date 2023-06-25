@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/css/main.e68be34f.css",
-    "main.js": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/js/main.4a34b0b2.js",
-    "static/js/787.9cc6dcf0.chunk.js": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/js/787.9cc6dcf0.chunk.js",
-    "static/media/accueil.jpeg": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/media/accueil.cb0a78de748a5673f168.jpeg",
-    "static/media/logo agglo.png": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/media/logo agglo.6fab38237882d86dfd85.png",
-    "static/media/default.jpeg": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/media/default.73db1592403661a47d9e.jpeg",
-    "static/media/transport2.jpeg": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/media/transport2.981243ef34f479c5c18e.jpeg",
-    "static/media/transport.jpeg": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/media/transport.61dcc963c5eae05481b9.jpeg",
-    "index.html": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/index.html",
-    "main.e68be34f.css.map": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/css/main.e68be34f.css.map",
-    "main.4a34b0b2.js.map": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/js/main.4a34b0b2.js.map",
-    "787.9cc6dcf0.chunk.js.map": "/Applications/XAMPP/xamppfiles/htdocs/SAeS4/static/js/787.9cc6dcf0.chunk.js.map"
+    "main.css": "/SAeS4/build/static/css/main.eb818ed4.css",
+    "main.js": "/SAeS4/build/static/js/main.13a1012f.js",
+    "static/js/787.9cc6dcf0.chunk.js": "/SAeS4/build/static/js/787.9cc6dcf0.chunk.js",
+    "static/media/logo agglo.png": "/SAeS4/build/static/media/logo agglo.6fab38237882d86dfd85.png",
+    "static/media/default.jpeg": "/SAeS4/build/static/media/default.73db1592403661a47d9e.jpeg",
+    "static/media/transport2.jpeg": "/SAeS4/build/static/media/transport2.981243ef34f479c5c18e.jpeg",
+    "static/media/transport.jpeg": "/SAeS4/build/static/media/transport.61dcc963c5eae05481b9.jpeg",
+    "index.html": "/SAeS4/build/index.html",
+    "main.eb818ed4.css.map": "/SAeS4/build/static/css/main.eb818ed4.css.map",
+    "main.13a1012f.js.map": "/SAeS4/build/static/js/main.13a1012f.js.map",
+    "787.9cc6dcf0.chunk.js.map": "/SAeS4/build/static/js/787.9cc6dcf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e68be34f.css",
-    "static/js/main.4a34b0b2.js"
+    "static/css/main.eb818ed4.css",
+    "static/js/main.13a1012f.js"
   ]
 }
