@@ -34,7 +34,7 @@ function Navbar() {
 					<header>
 						
 						<nav ref={navRef}>
-							<Link to="/" className="nav-link">Accueil</Link>
+							<Link to="/SAeS4" className="nav-link">Accueil</Link>
 							<Link to="/transport" className="nav-link">Transport</Link>
 							<Link to="/nousretrouver" className="nav-link">Nous Retrouver</Link>
 							<Link to="/sondage" className="nav-link">Sondage</Link>
@@ -46,7 +46,7 @@ function Navbar() {
 								<Link to ="/sedeconnecter"><button className='Inscription-btn-2'>Déconnexion</button></Link>
 							</div>
 						</nav>
-						<Link to="/" className="logo"><img src={logo} alt=""/></Link>
+						<Link to="/SAeS4" className="logo"><img src={logo} alt=""/></Link>
 						<div className="section-btn">
 							<Link to={`/profil?id=${userIdlog}`}><button className='Connexion-btn'>Profil</button></Link>
 							<Link to ="/sedeconnecter"><button className='Inscription-btn'>Déconnexion</button></Link>
@@ -63,7 +63,7 @@ function Navbar() {
 					<header>
 						
 						<nav ref={navRef}>
-							<Link to="/" className="nav-link">Accueil</Link>
+							<Link to="/SAeS4" className="nav-link">Accueil</Link>
 							<Link to="/transport" className="nav-link">Transport</Link>
 							<Link to="/nousretrouver" className="nav-link">Nous Retrouver</Link>
 							<Link to="/sondage" className="nav-link">Sondage</Link>
@@ -75,7 +75,7 @@ function Navbar() {
 								<Link to ="/inscription"><button className='Inscription-btn-2'>Inscription</button></Link>
 							</div>
 						</nav>
-						<Link to="/" className="logo"><img src={logo} alt=""/></Link>
+						<Link to="/SAeS4" className="logo"><img src={logo} alt=""/></Link>
 						<div className="section-btn">
 							<Link to="/connexion"><button className='Connexion-btn'>Connexion</button></Link>
 							<Link to ="/inscription"><button className='Inscription-btn'>Inscription</button></Link>
