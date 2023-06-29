@@ -19,7 +19,12 @@ Site permettant de répondre à un sondage alimentaire.
     
 ```bash
 Dans votre votre serveur local exemple XAMPP
-Couper et coller le fichier php_saes4
+Coupez et coller le fichier php_saes4
+```
+
+```bash
+Dans votre SGBD favori exemple PhpMyAdmin
+Importer la base de donnée nommée Bdd.sql
 ```
 
 ### Le tour est joué ENJOY !!!
